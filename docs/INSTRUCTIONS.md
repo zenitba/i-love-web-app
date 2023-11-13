@@ -1,7 +1,7 @@
 
 # I ♥ Web App
 
-Een webapp voor het bijhouden van de We ♥ Web presentaties, congressen, meet-ups en nieuwe dingen di e je geleerd hebt. 
+Een webapp voor het bijhouden van de We ♥ Web presentaties, congressen, meet-ups en nieuwe dingen die je geleerd hebt. 
 
 ## Context
 
