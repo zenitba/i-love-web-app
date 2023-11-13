@@ -1,5 +1,5 @@
 
-# We ♥ Web
+# I ♥ Web App
 
 Een webapp voor het bijhouden van de We ♥ Web presentaties en workshops. 
 
