@@ -95,8 +95,8 @@
       </div>
       <!-- Buttons naar vorige, volgende en see all post -->
       <div class="arrows">
-        <button id="next">&#8599</button>
-        <button id="prev">&#8599</button>
+        <button id="next">&#8592</button>
+        <button id="prev">&#8594</button>
         <button id="back">See All The Post &#8599</button>
       </div>
     </div>
@@ -203,26 +203,26 @@ header .logo{
 
 }
 .carousel .list .item:nth-child(1){
-    transform: var(--item1-transform);
-    filter: var(--item1-filter);
-    z-index: var(--item1-zIndex);
-    opacity: var(--item1-opacity);
+    transform: translateX(-100%) translateY(-5%) scale(1.5);
+    filter:  blur(30px);
+    z-index: 11;
+    opacity: 0;
     pointer-events: none;
 }
 .carousel .list .item:nth-child(3){
-    transform: var(--item3-transform);
-    filter: var(--item3-filter);
-    z-index: var(--item3-zIndex);
+    transform: translate(50%,10%) scale(0.8);
+    filter:  blur(10px);
+    z-index: 9;
 }
 .carousel .list .item:nth-child(4){
-    transform: var(--item4-transform);
-    filter: var(--item4-filter);
-    z-index: var(--item4-zIndex);
+    transform: translate(90%,20%) scale(0.5);
+    filter:  blur(30px);
+    z-index: 8;
 }
 .carousel .list .item:nth-child(5){
-    transform: var(--item5-transform);
-    filter: var(--item5-filter);
-    opacity: var(--item5-opacity);
+    transform: translate(120%,30%) scale(0.3);
+    filter:  blur(40px);
+    opacity: 0;
     pointer-events: none;
 }
 /* animation text in item2 */
@@ -258,19 +258,18 @@ header .logo{
 }
 @keyframes transformFromPosition2{
     from{
-        transform: var(--item2-transform);
-        filter: var(--item2-filter);
-        opacity: var(--item2-opacity);
+        transform: translateX(0);
+        filter: blur(0px);
+        opacity: 1;
     }
-}
-.carousel.next .item:nth-child(2){
+}.carousel.next .item:nth-child(2){
     animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
 }
 @keyframes transformFromPosition3{
     from{
-        transform: var(--item3-transform);
-        filter: var(--item3-filter);
-        opacity: var(--item3-opacity);
+        transform: translate(50%,10%) scale(0.8);
+        filter: blur(10px);
+        opacity: 1;
     }
 }
 .carousel.next .item:nth-child(3){
@@ -278,9 +277,9 @@ header .logo{
 }
 @keyframes transformFromPosition4{
     from{
-        transform: var(--item4-transform);
-        filter: var(--item4-filter);
-        opacity: var(--item4-opacity);
+        transform: translate(90%,20%) scale(0.5);
+        filter: blur(30px);
+        opacity: 1;
     }
 }
 .carousel.next .item:nth-child(4){
@@ -288,9 +287,9 @@ header .logo{
 }
 @keyframes transformFromPosition5{
     from{
-        transform: var(--item5-transform);
-        filter: var(--item5-filter);
-        opacity: var(--item5-opacity);
+        transform: translate(120%,30%) scale(0.3);
+        filter:blur(40px);
+        opacity:1;
     }
 }
 /* previous */
@@ -308,9 +307,9 @@ header .logo{
 }
 @keyframes transformFromPosition1{
     from{
-        transform: var(--item1-transform);
-        filter: var(--item1-filter);
-        opacity: var(--item1-opacity);        
+        transform: translateX(-100%) translateY(-5%) scale(1.5);
+        filter: blur(30px);
+        opacity: 0;        
     }
 }
 
@@ -407,12 +406,12 @@ header .logo{
 }
 #prev,
 #next{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     font-family: monospace;
     border: 1px solid #06877a;
-    font-size: large;
+    font-size: 2rem;
     bottom: 20%;
     left: 10%;
     background-color: black;
@@ -441,7 +440,7 @@ header .logo{
     transition: opacity 0.5s;
     color: var(--color-cyan);
 }
-#prev:focus,
+    #prev:focus,
     #next:focus,
     #back:focus,
     .seeMore:focus
@@ -451,11 +450,11 @@ header .logo{
         color: #000000; /* Tekstkleur voor focus */
     }
     .carousel .list .item .introduce .seeMore:focus,
-.carousel.showDetail .list .item:nth-child(2) .detail .checkout button:focus {
-outline: none;
-background-color: #00ffc3; /* Achtergrondkleur voor focus */
-color: #000000; /* Tekstkleur voor focus */
-}
+   .carousel.showDetail .list .item:nth-child(2) .detail .checkout button:focus {
+    outline: none;
+    background-color: #00ffc3; /* Achtergrondkleur voor focus */
+    color: #000000; /* Tekstkleur voor focus */
+     }
 .carousel.showDetail #back{
     opacity: 1;
     color: cadetblue;
