@@ -3,41 +3,74 @@ import { hygraph } from '$lib/utils/hygraph.js';
 
 export async function load() {
   const query = gql`
-    query MyQuery {
-      kilians {
-        image {
-          url
-        }
-        title
-        name
-        description
-        content {
-          text
-        }
+  query MyQuery {
+    ischas {
+      image {
+        url
       }
-      valeries {
-        image {
-          url
-        }
-        title
-        name
-        description
-        content {
-          text
-        }
-      }
-      aCcessibility {
-        image {
-          url
-        }
-        title
-        name
-        description
-        content {
-          text
-        }
+      title
+      name
+      description
+      content {
+        markdown
       }
     }
+    valeries {
+      image {
+        url
+      }
+      title
+      name
+      description
+      content {
+        markdown
+      }
+    }
+    tims {
+      image {
+        url
+      }
+      title
+      name
+      description
+      content {
+        markdown
+      }
+    }
+    yolijns {
+      image {
+        url
+      }
+      title
+      name
+      description
+      content {
+        markdown
+      }
+    }
+    julies {
+      image {
+        url
+      }
+      title
+      name
+      description
+      content {
+        markdown
+      }
+    }
+    kilians {
+      image {
+        url
+      }
+      title
+      name
+      description
+      content {
+        markdown
+      }
+    }
+  }
   `;
 
   return await hygraph.request(query)
